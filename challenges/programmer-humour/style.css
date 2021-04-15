@@ -1,0 +1,28 @@
+body {
+  background-image: url('sample.jpg');
+}
+header {
+  text-align: center;
+  color: white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: rgb(60, 148, 139);
+  padding: 1%;
+  margin: 3em;
+}
+
+main {
+  margin: 3em;
+}
+
+.card-body {
+  background-color: rgb(60, 148, 139);
+  color: rgb(25, 2, 54);
+
+  text-align: center;
+}
+
+.card-text {
+  font-size: 20px;
+  font-family: sans-serif;
+}

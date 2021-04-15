@@ -25,4 +25,5 @@ fetch('https://codeyourfuture.herokuapp.com/api/greetings')
     // Write the code to display the greeting text here
     const greetingEl = document.querySelector('#greeting-text');
     greetingEl.innerHTML = greeting;
-  });
+  })
+  .catch((error) => console.log(error));

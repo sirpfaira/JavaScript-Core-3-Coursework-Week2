@@ -17,16 +17,22 @@ function addDog() {
       let bodyDiv = document.createElement('div');
       bodyDiv.className = 'card-img-overlay';
       let cardTitle = document.createElement('h5');
+      let span = document.createElement('span');
+      span.style.backgroundColor = 'rgb(31, 75, 71)';
+      span.style.padding = '5px';
+      //cardTitle.style.textAlign = 'center';
       cardTitle.className = 'card-title';
       const urlArr = data.message.split('/');
       const dogTitle = urlArr[urlArr.length - 2].toUpperCase();
       const cardText = document.querySelector('.card-title');
-      cardTitle.innerHTML = `${dogTitle}`;
+      span.innerHTML = `${dogTitle}`;
+      cardTitle.appendChild(span);
       bodyDiv.appendChild(cardTitle);
       card.appendChild(bodyDiv);
       item.appendChild(card);
       cardContainer.insertBefore(item, cardContainer.firstChild);
-    });
+    })
+    .catch((error) => console.log(error));
 }
 const submitButton = document.querySelector('#add-dog');
 submitButton.addEventListener('click', function processData(event) {
